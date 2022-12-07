@@ -1,24 +1,14 @@
-# README
+## TestGuru
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Веб-приложение для викторин и тестов.
+Список сущносней:
+- Test
+- Category
+- Question
+- Answer
+- User
+- Admin
+- Result
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Учебный проект по курсу "Основы Ruby on Rails"
+Онлайн-школа Thinknetica
