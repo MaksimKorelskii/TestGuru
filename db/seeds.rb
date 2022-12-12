@@ -6,27 +6,27 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-Category.create!([
+categories = Category.create!([
     { title: 'Backend' },
     { title: 'Frontend' },
     { title: 'Fullstack' }
   ])
 
-User.create!([
+users = User.create!([
     { name: 'Peter' },
     { name: 'Lois' },
     { name: 'Maksim' },
     { name: 'Andrey' }
   ])
 
-Test.create!([
+tests = Test.create!([
     { title: 'Basic Ruby Test', level: 1, author_id: users[0].id, category_id: categories[0].id },
     { title: 'Basic JavaScript Test', level: 1, author_id: users[3].id, category_id: categories[1].id },
     { title: 'Ruby on Rails', level: 2, author_id: users[2].id, category_id: categories[2].id },
     { title: 'Pyton', level: 3, author_id: users[1].id, category_id: categories[2].id }
   ])
 
-Question.create!([
+questions = Question.create!([
     { body: 'Where Great Khan at Boulder City tells you to go to meet with Benny?', test_id: tests[2].id },
     { body: 'Who was one of the founders of Caesars Legion?', test_id: tests[2].id },
     { body: 'What does frozen string literal do?', test_id: tests[0].id },
