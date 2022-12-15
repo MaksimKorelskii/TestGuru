@@ -18,7 +18,8 @@ class QuestionsController < ApplicationController
   end
 
   def create
-    @question = Question.new(question_params)
+    @test = Test.find(params[:test_id])
+    @question = @test.questions.build(question_params)
 
     if @question.save
       redirect_to @question, notice: 'Question was successfully created.'
