@@ -1,5 +1,5 @@
 class AddEmailToUsers < ActiveRecord::Migration[6.1]
   def change
-    add_column :users, :email, :string, default: 'name@example.com', null: false
+    add_column :users, :email, :string, null: false, unique: true
   end
 end
