@@ -1,0 +1,14 @@
+<h2><%= @test.title %></h2><hr>
+  <div>
+    <span>Level: <%= @test.level %></span>
+    <span>Category: <%= @test.category.title %></span>
+  </div>
+
+  <table>
+    <th colspan="10">Question</th>
+    <th colspan="10">Actions</th>
+    <%= render @questions %>
+  </table>
+
+<%= link_to 'Back', tests_path %></span>
+<%= link_to 'Create Question', new_test_question_path(@test) %>
