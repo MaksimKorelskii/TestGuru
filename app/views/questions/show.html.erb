@@ -1,1 +1,7 @@
-<p><%= @question.body %></p>
+<p>
+  <strong>Body:</strong>
+  <%= @question.body %>
+</p>
+
+<%= link_to 'Edit', edit_question_path(@question) %> |
+<%= link_to 'Back', question_path %>
