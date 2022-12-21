@@ -1,9 +1,3 @@
-<form action="/tests/<%= params[:test_id] %>/questions" method="POST" >
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-  <p>
-    <label for="test-body">Body:</label>
-    <input type="text" name="question[body]" id="test-body">
-  </p>
+<%= render 'form' %>
 
-  <input type="submit" value="Create">
-</form>
+<%= link_to 'Back', test_path(@test) %>
