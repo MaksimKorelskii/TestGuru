@@ -1,5 +1,5 @@
 class TestPassage < ApplicationRecord
-  CORRECT_QUESTIONS_RATIO = 85
+  CORRECT_QUESTIONS_RATIO = 85.freeze
 
   belongs_to :user
   belongs_to :test
@@ -7,12 +7,20 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_current_question, on: :create
 
+  def position_of_current_question
+    test.questions.order(:id).where('id < ?', current_question.id).count + 1
+  end
+
   def successful?
     correct_question_percentage >= CORRECT_QUESTIONS_RATIO
   end
 
   def correct_question_percentage
-    correct_questions.to_f / test.questions.count * 100
+    (correct_questions.to_f / all_questions * 100).round(2)
+  end
+
+  def all_questions
+    test.questions.count
   end
 
   def completed?
@@ -30,14 +38,10 @@ class TestPassage < ApplicationRecord
 
   def before_validation_set_current_question
     self.current_question = test.questions.first if test.present?
-    # self.current_question = next_question
   end
 
   def correct_answer?(answer_ids)
-    correct_answers_count = correct_answers.count
-
-    (correct_answers_count == correct_answers.where(id: answer_ids).count) &&
-    correct_answers_count == answer_ids.count
+    correct_answers.ids.sort == answer_ids.to_a.map(&:to_i).sort
   end
 
   def correct_answers
@@ -46,10 +50,5 @@ class TestPassage < ApplicationRecord
 
   def next_question
     test.questions.order(:id).where('id > ?', current_question.id).first
-    # if self.current_question.present?
-    #   self.test.questions.order(:position).where('position > ?', current_question.position).first
-    # else
-    #   self.current_question = self.test.questions.find_by(position: 1)
-    # end
   end
 end
