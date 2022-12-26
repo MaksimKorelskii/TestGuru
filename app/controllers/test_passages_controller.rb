@@ -2,7 +2,6 @@ class TestPassagesController < ApplicationController
   before_action :set_test_passage, only: %i[ result show update ]
 
   def show
-    # @test = Test.find(@test_passage.test_id)
   end
 
   def result
