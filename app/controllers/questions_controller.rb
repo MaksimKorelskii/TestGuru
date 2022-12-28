@@ -8,14 +8,14 @@ class QuestionsController < ApplicationController
   end
 
   def new
-    @question = @test.questions.build
+    @question = @test.questions.new
   end
 
   def edit
   end
 
   def create
-    @question = @test.questions.build(question_params)
+    @question = @test.questions.new(question_params)
 
     if @question.save
       redirect_to @question, notice: 'Question was successfully created.'

@@ -55,7 +55,7 @@ Answer.create!([
     { body: 'Python framework', correct: false, question_id: questions[4].id }
   ])
 
-UserTest.create!([
+TestPassage.create!([
     { test_id: tests[0].id, user_id: users[0].id },
     { test_id: tests[1].id, user_id: users[1].id },
     { test_id: tests[2].id, user_id: users[1].id },
