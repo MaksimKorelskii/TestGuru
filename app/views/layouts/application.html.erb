@@ -11,7 +11,13 @@
   </head>
 
   <body>
+    <% if logged_in? %>
+      <p class='nav'>
+        Welcome to <%= link_to 'Guru', root_path %> <b><%= current_user.name %></b>
+    <% end %>
+
     <%= yield %>
+    
     <%= render 'shared/footer' %>
   </body>
 </html>

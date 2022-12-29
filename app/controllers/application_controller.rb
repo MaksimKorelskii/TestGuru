@@ -1,14 +1,18 @@
 class ApplicationController < ActionController::Base
   # before_action :authenticate_user!
-  helper_method :current_user# , :logged_in?, :current_user?
+  helper_method :current_user, :logged_in? #, :current_user?
 
   private
 
   def authenticate_user!
-    return if current_user
+    unless current_user
+    # return if current_user
 
-    cookies[:path] = request.fullpath
-    redirect_to login_path, alert: "Are you a Guru? Enter Email and Password."
+    # cookies[:path] = request.fullpath
+      return redirect_to login_path, alert: "Are you a Guru? Enter Email and Password."
+    end
+
+    cookies[:email] = current_user.email
   end
 
   def current_user
