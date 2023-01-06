@@ -12,8 +12,20 @@
 
   <body>
     <% if logged_in? %>
+      <div class='nav'>
+        <p>
+          Welcome to <%= link_to 'Guru', root_path %> <b><%= current_user.name %></b>
+        </p>
+
+        <p>
+          <%= link_to 'Exit', logout_path, method: :post %>
+        </p>
+      </div>
+    <% else %>
       <p class='nav'>
-        Welcome to <%= link_to 'Guru', root_path %> <b><%= current_user.name %></b>
+        <%= link_to 'Signup', signup_path %>
+        <%= link_to 'Login', login_path %> 
+      </p>
     <% end %>
 
     <%= yield %>
