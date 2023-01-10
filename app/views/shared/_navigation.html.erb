@@ -1,16 +1,16 @@
-<% if logged_in? %>
+<% if user_signed_in? %>
   <div class='nav'>
     <p>
       Welcome, <b><%= current_user.name %></b> <%= link_to 'Guru', root_path %>
     </p>
 
     <p>
-      <%= link_to 'Exit', logout_path, method: :post %>
+      <%= link_to 'Exit', destroy_user_session_path, method: :delete %>
     </p>
   </div>
 <% else %>
   <p class='nav'>
-    <%= link_to 'Signup', signup_path %>
-    <%= link_to 'Login', login_path %> 
+    <%= link_to 'Signup', new_user_registration_path %>
+    <%= link_to 'Login', new_user_session_path %> 
   </p>
 <% end %>
