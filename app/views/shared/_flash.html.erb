@@ -1,0 +1,5 @@
+<% unless flash.empty? %>
+  <% flash.each do |name, msg| %>
+    <%= tag.div msg, class: "flash #{name.to_s}" %>
+  <% end %>
+<% end %>
