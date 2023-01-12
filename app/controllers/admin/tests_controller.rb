@@ -18,9 +18,10 @@ class Admin::TestsController < Admin::BaseController
 
   def create
     @test = Test.new(test_params)
+    @test.author = current_user
 
     if @test.save
-      redirect_to @test, notice: 'Test was successfully created.'
+      redirect_to admin_test_path(@test), notice: 'Test was successfully created.'
     else
       render :new, status: :unprocessable_entity
     end
@@ -28,7 +29,7 @@ class Admin::TestsController < Admin::BaseController
 
   def update
     if @test.update(test_params)
-      redirect_to @test, notice: 'Test was successfully updated.'
+      redirect_to admin_test_path(@test), notice: 'Test was successfully updated.'
     else
       render :edit, status: :unprocessable_entity
     end
@@ -37,12 +38,7 @@ class Admin::TestsController < Admin::BaseController
   def destroy
     @test.destroy
 
-    redirect_to tests_path, notice: "Question was successfully destroyed."
-  end
-
-  def start
-    current_user.tests.push(@test)
-    redirect_to current_user.test_passage(@test)
+    redirect_to admin_tests_path, notice: "Test was successfully destroyed."
   end
 
   private

@@ -1,7 +1,7 @@
 <% if user_signed_in? %>
   <div class='nav-admin'>
     <p>
-      Admin Panel | Welcome, <b><%= current_user.first_name %></b> <%= link_to 'Guru', root_path %>
+      Admin Panel | Welcome, <b><%= current_user.first_name %></b> <%= link_to 'Guru', admin_tests_path %>
     </p>
 
     <p>
