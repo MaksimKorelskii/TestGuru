@@ -7,8 +7,9 @@
   <table>
     <th colspan="10">Question</th>
     <th colspan="10">Actions</th>
-    <%= render @questions %>
+    <%#= render @questions %>
+    <%= render partial: 'questions/question', collection: @test.questions %>
   </table>
 
-<%= link_to 'Back to tests', tests_path %></span>
+<%= link_to 'Back to tests', admin_tests_path %></span>
 <%= link_to 'Create Question', new_test_question_path(@test) %>
