@@ -1,0 +1,15 @@
+<h2><%= @test.title %></h2><hr>
+  <div>
+    <span>Level: <%= @test.level %></span>
+    <span>Category: <%= @test.category.title %></span>
+  </div>
+
+  <table>
+    <th colspan="10">Question</th>
+    <th colspan="10">Actions</th>
+    <%= render @questions %>
+    <%#= render partial: 'questions/question', collection: @test.questions %>
+  </table>
+
+<%= link_to 'Back to tests', admin_tests_path %></span>
+<%= link_to 'Create Question', new_admin_test_question_path(@test) %>
