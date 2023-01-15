@@ -35,3 +35,23 @@ en:
   tests:
     index:
       header: 'Tricky Tests'
+
+  admin:
+    tests:
+      create:
+        success: 'Test was successfully created.'
+      update:
+        update: 'Test was successfully updated.'
+      destroy:
+        delete: "Test was successfully destroyed."
+
+  helpers:
+    submit:
+      test:
+        create: 'Create test'
+        update: 'Update test'
+    label:
+      test:
+        level: 'Level'
+        title: "Title"
+        category: "Category"

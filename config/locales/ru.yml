@@ -5,3 +5,23 @@ ru:
     index:
       header: 'Доступные Тесты'
 
+  admin:
+    tests:
+      create:
+        success: 'Тест успешно создан.'
+      update:
+        update: 'Тест успешно обновлён.'
+      destroy:
+        delete: "Тест успешно удалён."
+
+
+  helpers:
+    submit:
+      test:
+        create: 'Создать тест'
+        update: 'Обновить тест'
+    label:
+      test:
+        level: 'Уровень'
+        title: "Название"
+        category: "Категория"
