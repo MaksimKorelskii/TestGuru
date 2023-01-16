@@ -1,0 +1,77 @@
+ru:
+  devise:
+    registrations:
+      new:
+        header: 'Стань Guru'
+    sessions:
+      create:
+        greet: 'Привет'
+      new:
+        enter_header: 'Войти в Guru'
+
+  shared:
+    navigation:
+      panel: 'Добро пожаловать, %{name}'
+      exit: 'Выход'
+      signup: 'Зарегистрировать'
+      login: 'Войти'
+
+  tests:
+    index:
+      header: 'Доступные Тесты'
+      title: 'Название'
+      level: 'Уровень'
+      questions: 'Вопросы'
+      actions: 'Действия'
+    test:
+      start: 'Начать тест'
+
+
+  admin:
+    navigation:
+      admin_panel: 'Панель администратора | Привет, %{name}'
+      exit: 'Выход'
+
+    tests:
+      create:
+        success: 'Тест успешно создан.'
+      update:
+        update: 'Тест успешно обновлён.'
+      destroy:
+        delete: "Тест успешно удалён."
+      index:
+        title: 'Название'
+        level: 'Уровень'
+        questions: 'Вопросы'
+        actions: 'Действия'
+        new_test: 'Создать новый тест'
+      new:
+        header: 'Создать новый тест'
+        back: "Назад к списку тестов"
+      edit:
+        header: 'Обновление теста'
+        back: "Назад к списку тестов"
+      show:
+        level: 'Уровень:'
+        category: 'Категория:'
+        questions: 'Вопросы'
+        actions: 'Действия'
+        back: "Назад к списку тестов"
+        new_question: 'Создать новый вопрос'
+
+      test:
+        show: 'Показать'
+        edit: 'Редактировать'
+        delete: 'Удалить'
+
+
+  helpers:
+    submit:
+      test:
+        create: 'Создать тест'
+        update: 'Обновить тест'
+    label:
+      test:
+        level: 'Уровень'
+        title: "Название"
+        category: "Категория"

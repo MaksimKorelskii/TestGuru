@@ -1,16 +1,11 @@
 <% if user_signed_in? %>
   <div class='nav-admin'>
     <p>
-      Admin Panel | Welcome, <b><%= current_user.first_name %></b> <%= link_to 'Guru', admin_tests_path %>
+      <%= t('.admin_panel', name: current_user.first_name) %> <%= link_to 'Guru', admin_tests_path %>
     </p>
 
     <p>
-      <%= link_to 'Exit', destroy_user_session_path, method: :delete %>
+      <%= link_to t('.exit'), destroy_user_session_path, method: :delete %>
     </p>
   </div>
-<% else %>
-  <p class='nav-admin'>
-    <%= link_to 'Signup', new_user_registration_path %>
-    <%= link_to 'Login', new_user_session_path %> 
-  </p>
 <% end %>
