@@ -22,6 +22,6 @@ class ApplicationController < ActionController::Base
   end
 
   def hello_flash_message
-    flash[:notice] = "Привет, #{current_user.first_name}!" if current_user.present?
+    flash[:notice] = "#{t('.greet')}, #{current_user.first_name}!" if current_user.present?
   end
 end

@@ -4,6 +4,8 @@ en:
       new:
         header: 'Become a Guru'
     sessions:
+      create:
+        greet: 'Hello'
       new:
         enter_header: 'Enter the Guru Gates'
 

@@ -4,6 +4,8 @@ ru:
       new:
         header: 'Стань Guru'
     sessions:
+      create:
+        greet: 'Привет'
       new:
         enter_header: 'Войти в Guru'
 
