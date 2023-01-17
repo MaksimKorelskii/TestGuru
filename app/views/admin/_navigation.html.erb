@@ -1,7 +1,8 @@
 <% if user_signed_in? %>
-  <div class='nav-admin'>
+  <div class="navbar sticky-top navbar-light bg-light px-5">
     <p>
-      <%= t('.admin_panel', name: current_user.first_name) %> <%= link_to 'Guru', admin_tests_path %>
+      <%= t('.admin_panel', name: current_user.first_name) %>
+      <%= link_to 'Guru', admin_tests_path, class: 'navbar-brand' %>
     </p>
 
     <p>

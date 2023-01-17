@@ -1,8 +1,10 @@
-<footer>
-  <p>
-  <%= current_year %> | Maksim Korelskii | <%= github_url('MaksimKorelskii', 'TestGutu')  %>
-  </p>
-  <p>Учебный проект по курсу "Основы Ruby on Rails" </p>
-  <p>Веб-приложение для викторин и тестов.</p>
-  <%= link_to 'Онлайн-школа Thinknetica', 'http://thinknetica.com/', target: :blank, 'rel': 'no-follow' %>
-</footer>
+<nav class="navbar fixed-bottom navbar-light bg-light px-3">
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <%= current_year %> | Maksim Korelskii | <%= github_url('MaksimKorelskii', 'TestGutu') %><br>
+      Учебный проект по курсу "Основы Ruby on Rails". 
+      Веб-приложение для викторин и тестов.
+      <%= link_to 'Онлайн-школа Thinknetica', 'http://thinknetica.com/', target: :blank, 'rel': 'no-follow' %>
+    </li>
+  </ul>
+</nav>

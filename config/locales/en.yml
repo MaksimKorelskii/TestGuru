@@ -15,6 +15,7 @@ en:
       exit: 'Exit'
       signup: 'Signup'
       login: 'Login'
+      transfer: 'Go to Admin Panel'
   tests:
     index:
       header: 'Tricky Tests'
