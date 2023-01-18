@@ -13,9 +13,16 @@
   <body>
     <%= render "admin/navigation" %>
 
-    <%= render 'shared/flash' %>
+    <div class="container">
+      <%= render 'shared/flash' %>
+      <div class="row justify-content-center mt-5">
 
-    <%= yield %>
+        <div class="col col-md-8">
+          <%= yield %>
+        </div>
+        
+      </div>
+    </div>
 
     <%= render 'shared/footer' %>
   </body>
