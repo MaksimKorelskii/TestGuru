@@ -9,6 +9,11 @@ ru:
       new:
         enter_header: 'Войти в Guru'
 
+  test_passages:
+    gist:
+      success: "Gist успешно сохранен!"
+      failure: "Во время сохранения Gist произошла ошибка"
+
   shared:
     navigation:
       panel: 'Добро пожаловать, %{name}'

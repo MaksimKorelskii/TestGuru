@@ -9,6 +9,11 @@ en:
       new:
         enter_header: 'Enter the Guru Gates'
 
+  test_passages:
+    gist:
+      success: "Gist was successfully created!"
+      failure: "An error occurred while saving Gist"
+
   shared:
     navigation:
       panel: 'Welcome, %{name}'
