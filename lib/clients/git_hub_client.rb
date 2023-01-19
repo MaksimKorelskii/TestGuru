@@ -1,6 +1,6 @@
 class GitHubClient
   ROOT_ENDPOIN = "https://api.github.com"
-  ACCESS_TOKEN = ENV['GITHUB_TOKEN']
+  ACCESS_TOKEN = ENV['GITHUB_ACCESS_TOKEN']
 
   def initialize
     @http_client = setup_http_client
@@ -20,5 +20,3 @@ class GitHubClient
     Faraday.new(url: ROOT_ENDPOIN)
   end
 end
-
-#28 min service
