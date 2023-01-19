@@ -1,4 +1,7 @@
 en:
+  gist_question_service:
+    description: "Question from %{test} test."
+
   devise:
     registrations:
       new:
@@ -11,7 +14,7 @@ en:
 
   test_passages:
     gist:
-      success: "Gist was successfully created!"
+      success: "Your gist was successfully created! %{gist_url}"
       failure: "An error occurred while saving Gist"
 
   shared:

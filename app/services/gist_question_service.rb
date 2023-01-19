@@ -5,31 +5,31 @@ class GistQuestionService
     @client = client || Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
   end
 
-  GitHubGist = Struct.new(:args) do
+  # GitHubGist = Struct.new(:args) do
 
-    def success?
-      args[:gist] ? true : false
-    end
+  #   def success?
+  #     args[:gist] ? true : false
+  #   end
 
-    # def gist_url
-    #   args[:gist][:html_url] if success?
-    # end
+  #   def gist_url
+  #     args[:gist][:html_url] if success?
+  #   end
 
-    # def error_message
-    #   args[:error]
-    # end
-  end
+  #   # def error_message
+  #   #   args[:error]
+  #   # end
+  # end
 
   def call
-    # @client.create_gist(gist_params)
-    GitHubGist.new(gist: @client.create_gist(gist_params))
+    @client.create_gist(gist_params)
+    # GitHubGist.new(gist: @client.create_gist(gist_params))
   end
 
   private
 
   def gist_params
     {
-      "description": "Question from #{@test.title} test.",
+      "description": I18n.t('gist_question_service.description', test: @test.title),
       "public": true,
       "files": {
         "test-app-question.txt": {
