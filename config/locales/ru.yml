@@ -1,6 +1,8 @@
 ru:
   gist_question_service:
     description: "Вопрос из %{test} теста."
+    auth_error: 'Ошибка авторизации на GitGub'
+
 
   devise:
     registrations:
@@ -12,10 +14,9 @@ ru:
       new:
         enter_header: 'Войти в Guru'
 
-  test_passages:
-    gist:
-      success: "Ваш Gist успешно создан! %{gist_url}"
-      failure: "Во время сохранения Gist произошла ошибка"
+  gists:
+    success: "Ваш Gist успешно создан! %{gist_url}"
+    failure: "Во время сохранения Gist произошла ошибка"
 
   shared:
     navigation:
@@ -37,6 +38,12 @@ ru:
 
 
   admin:
+    gists:
+      index:
+        question: 'Вопрос'
+        url: 'Ссылка на Gist'
+        user: 'Пользователь'
+
     navigation:
       admin_panel: 'Панель администратора | Привет, %{name}'
       exit: 'Выход'

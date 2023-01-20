@@ -1,6 +1,7 @@
 en:
   gist_question_service:
     description: "Question from %{test} test."
+    auth_error: 'GitHub authenticate error'
 
   devise:
     registrations:
@@ -12,10 +13,9 @@ en:
       new:
         enter_header: 'Enter the Guru Gates'
 
-  test_passages:
-    gist:
-      success: "Your gist was successfully created! %{gist_url}"
-      failure: "An error occurred while saving Gist"
+  gists:
+    success: "Your gist was successfully created! %{gist_url}"
+    failure: "An error occurred while saving Gist"
 
   shared:
     navigation:
@@ -35,6 +35,12 @@ en:
       start: 'Start test'
 
   admin:
+    gists:
+      index:
+        question: 'Question'
+        url: 'URL'
+        user: 'User'
+
     navigation:
       admin_panel: 'Admin Panel | Welcome, %{name}'
       exit: 'Exit'

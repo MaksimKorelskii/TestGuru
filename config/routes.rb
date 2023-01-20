@@ -10,10 +10,11 @@ Rails.application.routes.draw do
 
   resources :test_passages, only: %i[ show update ] do
     get :result, on: :member
-    post :gist, on: :member
+    post 'gist', to: "gists#create", on: :member
   end
 
   namespace :admin do
+    get 'gists', to: "gists#index" 
     resources :tests do
       resources :questions, shallow: true, except: :index do
         resources :answers, shallow: true, except: :index
