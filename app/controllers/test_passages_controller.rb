@@ -18,7 +18,7 @@ class TestPassagesController < ApplicationController
       render :show
     end
   end
-
+  
   private
 
   def set_test_passage
