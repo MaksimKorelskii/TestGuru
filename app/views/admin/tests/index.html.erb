@@ -1,14 +1,16 @@
-<table class="table table-striped table-hover table-responsive table-bordered">
-  <thead class="thead-dark">
+<table class="table">
     <tr>
-      <th><%= t('.title') %></th>
+      <th class="sort-by-title pointer">
+        <%= t('.title') %>
+        <%= octicon 'arrow-up', class: 'text-success hide' %>
+        <%= octicon 'arrow-down', class: 'text-success hide' %>
+      </th>
       <th><%= t('.level') %></th>
       <th><%= t('.questions') %></th>
       <th colspan="3"><%= t('.actions') %></th>
     </tr>
 
     <%= render @tests %>
-
-    <td><%= link_to t('.new_test') , new_admin_test_path, class: "btn btn-secondary btn-sm" %></td>
-  </thead>
 </table>
+
+<p><%= link_to t('.new_test') , new_admin_test_path, class: "btn btn-secondary btn-sm" %></p>
