@@ -1,0 +1,14 @@
+ru:
+  activerecord:
+    attributes:
+      user:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        remember_me: 'Запомнить'
+      models:
+        test: 'Тест'
+        question: 'Вопрос'
+        answer: 'Ответ'
+        user: 'Пользователь'
