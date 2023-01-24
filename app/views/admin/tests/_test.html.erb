@@ -2,13 +2,13 @@
   <td><%= test.title %></td>
   <td><%= test.level %></td>
   <td><%= test.questions.count %></td>
-  <td><%= link_to t('.show'), admin_test_path(test), 
-                  class: "btn btn-secondary btn-sm" %></td>
+  <td><%= link_to t('.show'), admin_test_path(test),
+                  class: "btn" %></td>
   <td><%= link_to t('.edit'), edit_admin_test_path(test), 
-                  class: "btn btn-secondary btn-sm" %></td>
+                  class: "btn" %></td>
   <td><%= link_to t('.delete'), 
                   admin_test_path(test), 
                   method: :delete, 
                   data: { confirm: 'Are you sure?' }, 
-                  class: "btn btn-secondary btn-sm" %></td>
+                  class: "btn" %></td>
 </tr>
