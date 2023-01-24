@@ -1,4 +1,4 @@
-class PasswordValidation {
+class PasswordConfirmation {
   constructor(form) {
     this.form = form
     this.password = form.user_password
@@ -21,11 +21,12 @@ class PasswordValidation {
 
     if (this.password.value !== this.password_confirmation.value) {
       this.textNode = document.createTextNode("Passwords don't match!")
-      paragraph.classList.add('flash', 'alert') }
+      paragraph.classList.add('flash', 'alert') 
+    }
       else {
       this.textNode = document.createTextNode("Passwords match.")
-      paragraph.classList.add('flash', 'notice') }
-
+      paragraph.classList.add('flash', 'notice') 
+    }
 
     paragraph.appendChild(this.textNode)
     this.container.parentNode.insertBefore(paragraph, this.container)
@@ -41,5 +42,5 @@ class PasswordValidation {
 
 document.addEventListener('turbolinks:load', function() {
   const reg_form = document.getElementById('new_user')
-  if (reg_form) new PasswordValidation(reg_form)
+  if (reg_form) new PasswordConfirmation(reg_form)
 })
