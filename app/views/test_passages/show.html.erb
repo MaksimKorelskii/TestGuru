@@ -1,6 +1,12 @@
-<h1>Passing the <%= @test_passage.test.title %> Test</h1>
+<h1><%= t('.passing')%> <%= @test_passage.test.title %></h1>
 
 <%= @test_passage.position_of_current_question %> / <%= @test_passage.all_questions %><br>
+
+<%= content_tag :span, 
+                class: 'progress-bar align-middle', 
+                data: { position_of_current_question: @test_passage.position_of_current_question, 
+                        all_questions: @test_passage.all_questions } do %>
+<% end %>
 
 <p>
   <b><%= @test_passage.current_question.body %></b>
@@ -18,9 +24,13 @@
     </p>
   <% end %>
 
-  <p><%= link_to 'Gist question', 
-            gist_test_passage_path(@test_passage), 
-            method: :post %></p>
+  <p>
+    <%= link_to 'Gist question', 
+                gist_test_passage_path(@test_passage), 
+                method: :post %>
+  </p>
 
-  <%= form.submit 'Next' %>
+  <p>
+    <%= form.button 'Next', id: 'next_button', type: "submit" %>
+  </p>
 <% end %>

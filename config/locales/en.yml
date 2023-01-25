@@ -35,6 +35,12 @@ en:
     test:
       start: 'Start test'
 
+  test_passages:
+    show:
+      passing: 'Passing the Test'
+    result:
+      back: 'Back to tests'
+
   admin:
     gists:
       index:
@@ -71,6 +77,7 @@ en:
         actions: 'Actions'
         back: "Back to Tests"
         new_question: 'Create new question'
+        edit_test: 'Edit Test' 
       test:
         show: 'Show'
         edit: 'Edit'
