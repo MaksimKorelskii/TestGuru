@@ -1,0 +1,23 @@
+ru:
+  activerecord:
+    attributes:
+      test:
+        title: 'Название'
+        level: 'Уровень'
+
+      user:
+        first_name: 'Имя'
+        last_name: 'Фамилия'
+        password: 'Пароль'
+        password_confirmation: 'Подтверждение пароля'
+        remember_me: 'Запомнить'
+
+      models:
+        test: 'Тест'
+        question: 'Вопрос'
+        answer: 'Ответ'
+        user: 'Пользователь'
+        admin: 'Администратор'
+        category: 'Категория'
+        gist: 'Gist'
+        test_passage: 'Прохождение теста'

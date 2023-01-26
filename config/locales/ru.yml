@@ -3,7 +3,6 @@ ru:
     description: "Вопрос из %{test} теста."
     auth_error: 'Ошибка авторизации на GitGub'
 
-
   devise:
     registrations:
       new:
@@ -36,6 +35,11 @@ ru:
     test:
       start: 'Начать тест'
 
+  test_passages:
+    show:
+      passing: 'Прохождение теста'
+    result:
+      back: 'К списку тестов'
 
   admin:
     gists:
@@ -74,6 +78,10 @@ ru:
         actions: 'Действия'
         back: "Назад к списку тестов"
         new_question: 'Создать новый вопрос'
+        edit_test: 'Редактировать тест' 
+
+      form_inline:
+        submit: "Ok"
 
       test:
         show: 'Показать'

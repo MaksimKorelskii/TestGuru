@@ -1,0 +1,23 @@
+en:
+  activerecord:          
+    attributes:
+      test:
+        title: 'Title'
+        level: 'Level'
+
+      user:
+        first_name: 'First name'
+        last_name: 'Last name'
+        password: 'Password'
+        password_confirmation: 'Password confirmation'
+        remember_me: 'Remember me'
+      
+      models:
+        test: 'Test'
+        question: 'Question'
+        answer: 'Answer'
+        user: 'User'
+        admin: 'Admin'
+        category: 'Category'
+        gist: 'Gist'
+        test_passage: 'Test Passage'

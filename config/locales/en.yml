@@ -24,6 +24,7 @@ en:
       signup: 'Signup'
       login: 'Login'
       transfer: 'Go to Admin Panel'
+      
   tests:
     index:
       header: 'Tricky Tests'
@@ -33,6 +34,12 @@ en:
       actions: 'Actions'
     test:
       start: 'Start test'
+
+  test_passages:
+    show:
+      passing: 'Passing the Test'
+    result:
+      back: 'Back to tests'
 
   admin:
     gists:
@@ -70,10 +77,13 @@ en:
         actions: 'Actions'
         back: "Back to Tests"
         new_question: 'Create new question'
+        edit_test: 'Edit Test' 
       test:
         show: 'Show'
         edit: 'Edit'
         delete: 'Delete'
+      form_inline:
+        submit: "Ok"
 
   helpers:
     submit:
