@@ -13,54 +13,54 @@ categories = Category.create!([
   ])
 
 users = User.create!([
-    { name: 'Peter', email: "peter@example.com", password: 'qwe123', password_confirmation: 'qwe123' },
-    { name: 'Lois', email: "lois@example.com", password: 'qwe123', password_confirmation: 'qwe123' },
-    { name: 'Maksim', email: "maksim@example.com", password: 'qwe123', password_confirmation: 'qwe123' },
-    { name: 'Andrey', email: "andrey@example.com", password: 'qwe123', password_confirmation: 'qwe123' }
+    { first_name: 'Peter', email: "peter@example.com", password: 'qwe123', password_confirmation: 'qwe123' },
+    { first_name: 'Lois', email: "lois@example.com", password: 'qwe123', password_confirmation: 'qwe123' },
+    { first_name: 'Maksim', email: "maksim@example.com", password: 'qwe123', password_confirmation: 'qwe123' },
+    { first_name: 'Andrey', email: "andrey@example.com", password: 'qwe123', password_confirmation: 'qwe123' }
   ])
 
 tests = Test.create!([
-    { title: 'Basic Ruby Test', level: 1, author_id: users[0].id, category_id: categories[0].id },
-    { title: 'Basic JavaScript Test', level: 1, author_id: users[3].id, category_id: categories[1].id },
-    { title: 'Ruby on Rails', level: 2, author_id: users[2].id, category_id: categories[2].id },
-    { title: 'Pyton', level: 3, author_id: users[1].id, category_id: categories[2].id }
+    { title: 'Basic Ruby Test', level: 1, author: users[0], category: categories[0] },
+    { title: 'Basic JavaScript Test', level: 1, author: users[3], category: categories[1] },
+    { title: 'Ruby on Rails', level: 2, author: users[2], category: categories[2] },
+    { title: 'Pyton', level: 3, author: users[1], category: categories[2] }
   ])
 
 questions = Question.create!([
-    { body: 'Where Great Khan at Boulder City tells you to go to meet with Benny?', test_id: tests[2].id },
-    { body: 'Who was one of the founders of Caesars Legion?', test_id: tests[2].id },
-    { body: 'What does frozen string literal do?', test_id: tests[0].id },
-    { body: 'Whats object_id?', test_id: tests[0].id },
-    { body: 'Whats the name of the temple where you start the game?', test_id: tests[3].id },
-    { body: 'Are there classes in JavaScript?', test_id: tests[1].id },
-    { body: 'Whats JavaScript?', test_id: tests[1].id }
+    { body: 'Where Great Khan at Boulder City tells you to go to meet with Benny?', test: tests[2] },
+    { body: 'Who was one of the founders of Caesars Legion?', test: tests[2] },
+    { body: 'What does frozen string literal do?', test: tests[0] },
+    { body: 'Whats object_id?', test: tests[0] },
+    { body: 'Whats the name of the temple where you start the game?', test: tests[3] },
+    { body: 'Are there classes in JavaScript?', test: tests[1] },
+    { body: 'Whats JavaScript?', test: tests[1] }
   ])
 
 Answer.create!([
-    { body: 'Tops', correct: true, question_id: questions[0].id },
-    { body: 'Luxe', correct: false, question_id: questions[0].id },
-    { body: 'Goodsprings', correct: false, question_id: questions[0].id },
-    { body: 'Joshua Graham', correct: true, question_id: questions[1].id },
-    { body: 'Ulysses', correct: false, question_id: questions[1].id },
-    { body: 'Mr. House', correct: false, question_id: questions[1].id },
-    { body: 'Freezes all strings', correct: true, question_id: questions[2].id },
-    { body: 'There for beauty', correct: false, question_id: questions[2].id },
-    { body: 'Memory address where object is stored', correct: true, question_id: questions[3].id },
-    { body: 'Length of an object', correct: false, question_id: questions[3].id },
-    { body: 'Temple of Trials', correct: true, question_id: questions[4].id },
-    { body: 'Detention Temple', correct: false, question_id: questions[4].id },
-    { body: 'Yes', correct: true, question_id: questions[5].id },
-    { body: 'No', correct: false, question_id: questions[5].id },
-    { body: 'Programming language', correct: true, question_id: questions[6].id },
-    { body: 'Python framework', correct: false, question_id: questions[4].id }
+    { body: 'Tops', correct: true, question: questions[0] },
+    { body: 'Luxe', correct: false, question: questions[0] },
+    { body: 'Goodsprings', correct: false, question: questions[0] },
+    { body: 'Joshua Graham', correct: true, question: questions[1] },
+    { body: 'Ulysses', correct: false, question: questions[1] },
+    { body: 'Mr. House', correct: false, question: questions[1] },
+    { body: 'Freezes all strings', correct: true, question: questions[2] },
+    { body: 'There for beauty', correct: false, question: questions[2] },
+    { body: 'Memory address where object is stored', correct: true, question: questions[3] },
+    { body: 'Length of an object', correct: false, question: questions[3] },
+    { body: 'Temple of Trials', correct: true, question: questions[4] },
+    { body: 'Detention Temple', correct: false, question: questions[4] },
+    { body: 'Yes', correct: true, question: questions[5] },
+    { body: 'No', correct: false, question: questions[5] },
+    { body: 'Programming language', correct: true, question: questions[6] },
+    { body: 'Python framework', correct: false, question: questions[4] }
   ])
 
 TestPassage.create!([
-    { test_id: tests[0].id, user_id: users[0].id },
-    { test_id: tests[1].id, user_id: users[1].id },
-    { test_id: tests[2].id, user_id: users[1].id },
-    { test_id: tests[3].id, user_id: users[2].id },
-    { test_id: tests[0].id, user_id: users[2].id },
-    { test_id: tests[1].id, user_id: users[2].id },
-    { test_id: tests[0].id, user_id: users[3].id }
+    { test: tests[0], user: users[0] },
+    { test: tests[1], user: users[1] },
+    { test: tests[2], user: users[1] },
+    { test: tests[3], user: users[2] },
+    { test: tests[0], user: users[2] },
+    { test: tests[1], user: users[2] },
+    { test: tests[0], user: users[3] }
   ])
