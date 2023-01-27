@@ -74,6 +74,8 @@ en:
         update: 'Test was successfully updated.'
       destroy:
         delete: "Test was successfully destroyed."
+        dont_delete: 'You can not delete this test, no one has passed it yet'
+
       index:
         title: 'Title'
         level: 'Level'

@@ -22,4 +22,8 @@ class Test < ApplicationRecord
   def questions_present?
     questions.present?
   end
+
+  def passed?
+    passed == true
+  end
 end
