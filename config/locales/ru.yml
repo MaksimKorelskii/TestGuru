@@ -39,6 +39,9 @@ ru:
       transfer: 'Перейти к панели администратора'
 
   tests:
+    start:
+      no_questions: 'В этом тесте нет вопросов'
+
     index:
       header: 'Доступные Тесты'
       title: 'Название'

@@ -39,6 +39,8 @@ en:
       transfer: 'Go to Admin Panel'
       
   tests:
+    start:
+      no_questions: 'There are no questions in this test'
     index:
       header: 'Tricky Tests'
       title: 'Title'
