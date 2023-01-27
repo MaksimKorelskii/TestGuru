@@ -1,5 +1,7 @@
-class FeedbacksController < ApplicationController
-  before_action :authenticate_user!
+class Admin::FeedbacksController < Admin::BaseController
+  def index
+    @feedbacks = Feedback.all
+  end
 
   def new
     @feedback = current_user.feedbacks.new
