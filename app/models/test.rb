@@ -18,12 +18,4 @@ class Test < ApplicationRecord
   def self.tests_by_category(category)
     by_category(category).pluck(:title).order(title: :DESC)
   end
-
-  def questions_present?
-    questions.present?
-  end
-
-  def passed?
-    passed == true
-  end
 end

@@ -39,8 +39,6 @@ en:
       transfer: 'Go to Admin Panel'
       
   tests:
-    start:
-      no_questions: 'There are no questions in this test'
     index:
       header: 'Tricky Tests'
       title: 'Title'
@@ -74,7 +72,6 @@ en:
         update: 'Test was successfully updated.'
       destroy:
         delete: "Test was successfully destroyed."
-        dont_delete: 'You can not delete this test, no one has passed it yet'
 
       index:
         title: 'Title'

@@ -43,12 +43,9 @@ class Admin::TestsController < Admin::BaseController
   end
 
   def destroy
-    if @test.passed?
       @test.destroy
+      
       redirect_to admin_tests_path, notice: t('.delete')
-    else
-      redirect_to root_path, notice: t('.dont_delete')
-    end
   end
 
   private

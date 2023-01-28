@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :feedbacks, only: %i[ index new create ]
+    resources :feedbacks, only: %i[ index ]
 
     get 'gists', to: "gists#index" 
     

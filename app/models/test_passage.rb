@@ -34,11 +34,6 @@ class TestPassage < ApplicationRecord
     save!
   end
 
-  def passed
-    self.test.passed = true
-    self.test.save
-  end
-
   private
 
   def before_validation_set_current_question
