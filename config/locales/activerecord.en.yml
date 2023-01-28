@@ -4,6 +4,7 @@ en:
       test:
         title: 'Title'
         level: 'Level'
+        published: 'Published'
 
       user:
         first_name: 'First name'
@@ -11,8 +12,14 @@ en:
         password: 'Password'
         password_confirmation: 'Password confirmation'
         remember_me: 'Remember me'
+
+      feedback:
+        title: 'Title'
+        body: 'Text'
+        user: 'User'
       
       models:
+        feedback: 'Feedback'
         test: 'Test'
         question: 'Question'
         answer: 'Answer'

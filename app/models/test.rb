@@ -14,6 +14,7 @@ class Test < ApplicationRecord
   scope :high_level, -> { where(level: 5..Float::INFINITY) }
   scope :by_category, -> (category) { joins(:category)
                                       .where(categories: { title: category }) }
+  scope :published, -> { where(published: true) }
 
   def self.tests_by_category(category)
     by_category(category).pluck(:title).order(title: :DESC)

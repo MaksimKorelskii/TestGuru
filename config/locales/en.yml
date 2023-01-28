@@ -1,4 +1,17 @@
 en:
+  feedbacks:
+    new:
+      feedback_header: 'Feedback'
+    form:
+      send: 'Send'
+      back: 'Back'
+    index:
+      title: 'Title'
+      body: 'Body'
+      user: 'User'
+    create:
+      success: 'Your feedback was send'
+
   gist_question_service:
     description: "Question from %{test} test."
     auth_error: 'GitHub authenticate error'
@@ -32,6 +45,7 @@ en:
       level: 'Level'
       questions: 'Questions'
       actions: 'Actions'
+      feedback: 'Feedback'
     test:
       start: 'Start test'
 
@@ -58,6 +72,7 @@ en:
         update: 'Test was successfully updated.'
       destroy:
         delete: "Test was successfully destroyed."
+
       index:
         title: 'Title'
         level: 'Level'
@@ -77,11 +92,13 @@ en:
         actions: 'Actions'
         back: "Back to Tests"
         new_question: 'Create new question'
-        edit_test: 'Edit Test' 
+        edit_test: 'Edit Test'
+        published: 'Published'
       test:
         show: 'Show'
         edit: 'Edit'
         delete: 'Delete'
+        
       form_inline:
         submit: "Ok"
 

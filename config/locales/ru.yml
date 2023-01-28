@@ -1,4 +1,17 @@
 ru:
+  feedbacks:
+    new:
+      feedback_header: 'Оставить отзыв'
+    form:
+      send: 'Отправить'
+      back: 'Назад'
+    index:
+      title: 'Заголовок'
+      body: 'Отзыв'
+      user: 'Пользователь'
+    create:
+      success: 'Ваш отзыв отправлен'
+
   gist_question_service:
     description: "Вопрос из %{test} теста."
     auth_error: 'Ошибка авторизации на GitGub'
@@ -32,6 +45,8 @@ ru:
       level: 'Уровень'
       questions: 'Вопросы'
       actions: 'Действия'
+      feedback: 'Оставить отзыв'
+
     test:
       start: 'Начать тест'
 
@@ -79,6 +94,7 @@ ru:
         back: "Назад к списку тестов"
         new_question: 'Создать новый вопрос'
         edit_test: 'Редактировать тест' 
+        published: 'Опубликовано'
 
       form_inline:
         submit: "Ok"

@@ -4,6 +4,7 @@ ru:
       test:
         title: 'Название'
         level: 'Уровень'
+        published: 'Опубликовать'
 
       user:
         first_name: 'Имя'
@@ -12,7 +13,13 @@ ru:
         password_confirmation: 'Подтверждение пароля'
         remember_me: 'Запомнить'
 
+      feedback:
+        title: 'Заголовок'
+        body: 'Отзыв'
+        user: 'Пользователь'
+
       models:
+        feedback: 'Отзыв'
         test: 'Тест'
         question: 'Вопрос'
         answer: 'Ответ'
