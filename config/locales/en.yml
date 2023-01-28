@@ -92,11 +92,13 @@ en:
         actions: 'Actions'
         back: "Back to Tests"
         new_question: 'Create new question'
-        edit_test: 'Edit Test' 
+        edit_test: 'Edit Test'
+        published: 'Published'
       test:
         show: 'Show'
         edit: 'Edit'
         delete: 'Delete'
+        
       form_inline:
         submit: "Ok"
 

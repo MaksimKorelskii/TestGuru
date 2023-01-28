@@ -2,7 +2,7 @@ class TestsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @tests = Test.all
+    @tests = Test.published
   end
 
   def start

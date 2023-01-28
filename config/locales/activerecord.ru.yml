@@ -4,6 +4,7 @@ ru:
       test:
         title: 'Название'
         level: 'Уровень'
+        published: 'Опубликовать'
 
       user:
         first_name: 'Имя'

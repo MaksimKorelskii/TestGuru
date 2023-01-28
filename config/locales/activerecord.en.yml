@@ -4,6 +4,7 @@ en:
       test:
         title: 'Title'
         level: 'Level'
+        published: 'Published'
 
       user:
         first_name: 'First name'

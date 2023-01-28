@@ -5,14 +5,14 @@
   </td>
   <td class='align-middle'><%= test.level %></td>
   <td class='align-middle'><%= test.questions.count %></td>
-  <td class='align-middle'><%= link_to t('show'), 
+  <td class='align-middle'><%= link_to t('.show'), 
                                        admin_test_path(test), 
                                        class: "btn" %></td>
-  <td class='align-middle'><%= link_to t('edit'), 
+  <td class='align-middle'><%= link_to t('.edit'), 
                                        edit_admin_test_path(test), 
                                        data: { test_id: test.id },
                                        class: "form-inline-link btn" %></td>
-  <td class='align-middle'><%= link_to t('delete'), 
+  <td class='align-middle'><%= link_to t('.delete'), 
                                        admin_test_path(test), 
                                        method: :delete, 
                                        data: { confirm: 'Are you sure?' }, 
