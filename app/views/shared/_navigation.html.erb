@@ -17,6 +17,8 @@
 
 <% if current_user&.admin? %>
   <div class="navbar sticky-top navbar-light bg-light px-5">
-    <%= link_to t('.transfer'), admin_tests_path %>
+    <%= link_to 'All Badges', badges_path, class: 'nav-link' %>
+    <%= link_to 'User Badges', user_badges_path, class: 'nav-link' %>
+    <%= link_to t('.transfer'), admin_tests_path, class: 'nav-link' %>
   </div>
 <% end %>

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'tests#index'
 
   resources :badges, only: %i[ index index_user ]
+  get :user_badges, to: 'badges#index_user'
 
   resources :feedbacks, only: %i[ new create ]
 

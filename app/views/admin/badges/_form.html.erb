@@ -1,0 +1,26 @@
+<div class='container'>
+  <%= form_with model: [:admin, @badge], local: true do |form| %>
+  <%= render 'shared/errors', resource: @badge %>
+  <div class="form">
+
+    <%= form.label :name %>
+    <%= form.text_field :name, class: 'form-control' %><br>
+
+    <%= form.label :image_url %>
+    <%= form.text_field :image_url, class: 'form-control' %><br>
+
+    <div><%= form.label :condition %></div>
+    <%= form.select :condition, [[t('.first_test'), 'first_test'],
+                                 [t('.all_tests_in_category'), 'all_tests_in_category'],
+                                 [t('.all_tests_with_level'), 'all_tests_with_level']] %><br>
+
+    <%= form.label :condition_parameter %>
+    <%= form.text_field :condition_parameter, class: 'form-control' %><br>
+
+    <div class='mt-2'>
+      <%= link_to t('back'), admin_badges_path, class: "btn btn-secondary btn-sm" %>
+      <%= form.submit %>
+    </div>
+  </div>
+  <% end %>
+</div>

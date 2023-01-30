@@ -1,6 +1,12 @@
 ru:
   activerecord:
     attributes:
+      badge:
+        name: 'Название'
+        image_url: 'URL изображения'
+        condition: 'Условие'
+        condition_parameter: 'Дополнительное условие'
+
       test:
         title: 'Название'
         level: 'Уровень'
@@ -19,6 +25,7 @@ ru:
         user: 'Пользователь'
 
       models:
+        badge: 'Награда'
         feedback: 'Отзыв'
         test: 'Тест'
         question: 'Вопрос'

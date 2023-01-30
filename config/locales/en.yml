@@ -1,4 +1,10 @@
 en:
+  badges:
+    index: 
+      header: 'All Badges'
+    index_user: 
+      header: 'User Badges'
+
   feedbacks:
     new:
       feedback_header: 'Feedback'
@@ -56,6 +62,12 @@ en:
       back: 'Back to tests'
 
   admin:
+    badges:
+      new:
+        header: 'Create Badge'
+      edit:
+        header: 'Edit Badge'
+
     gists:
       index:
         question: 'Question'

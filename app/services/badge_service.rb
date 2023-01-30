@@ -1,33 +1,36 @@
 class BadgeService
-  # def initialize(question, client: nil)
-  #   @question = question
-  #   @test = @question.test
-  #   @client = client || Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
-  # end
 
-  # def call
-  #   @client.create_gist(gist_params)
-  # end
+# знает какие тесты прошёл пользователь ранее (кол-во, сложность, категории и прочее) из БД
+# знает какой тест прошёл сейчас
+# знает какие бейджи существуют (правила)
+# определяет на основе п. выше какой бэйдж назначить сейчас, если требуется.
 
-  # def success?
-  #   @client.last_response.status == 201
-  # end
+# 1. Выдать бэйдж после успешного прохождения всех тестов из определённой категории (категории Backend)
+# 2. Выдать бэйдж после успешного прохождения теста с первой попытки
+# 3. Выдать бэйдж после успешного прохождения всех тестов определённого уровня
+# 4. Выдать бэйдж после успешного прохождения всех тестов
 
-  # private
+  CONDITIONS = {
+    first_test:            Badges::FirstTest,
+    all_tests_in_category: Badges::AllTestsInCategory,
+    all_tests_with_level:  Badges::AllTestsWithLevel
+  }.freeze
 
-  # def gist_params
-  #   {
-  #     "description": I18n.t('gist_question_service.description', test: @test.title),
-  #     "public": true,
-  #     "files": {
-  #       "test-app-question.txt": {
-  #         "content": gist_content
-  #       }
-  #     }
-  #   }
-  # end
+  def initialize(test_passage)
+    @test_passage = test_passage
+    @user = test_passage.user
+  end
 
-  # def gist_content
-  #   [@question.body, *@question.answers.pluck(:body)].join("\n")
-  # end
+  def call
+    Badge.find_each do |badge|
+      condition = CONDITIONS[badge.condition.to_sym].new(@test_passage, badge.condition_parameter)
+      add_badge!(badge) if condition.satisfied?
+    end
+  end
+
+  private
+
+  def add_badge!(badge)
+    @user.badges << badge
+  end
 end

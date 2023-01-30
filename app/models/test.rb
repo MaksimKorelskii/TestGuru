@@ -12,8 +12,9 @@ class Test < ApplicationRecord
   scope :easy_level, -> { where(level: 0..1) }
   scope :medium_level, -> { where(level: 2..4) }
   scope :high_level, -> { where(level: 5..Float::INFINITY) }
-  scope :by_category, -> (category) { joins(:category)
-                                      .where(categories: { title: category }) }
+  scope :by_level, ->(level) { where(level: level) }
+  scope :by_category, -> (category_id) { joins(:category)
+                                      .where(categories: { id: category_id }) }
   scope :published, -> { where(published: true) }
 
   def self.tests_by_category(category)

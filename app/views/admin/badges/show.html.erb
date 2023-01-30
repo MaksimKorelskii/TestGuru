@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= badge_image_helper(@badge) %>
+</p>
+<p>
+  <%= @badge.name %>
+</p>
+
+<%= link_to t('back'), admin_badges_path, class: "btn btn-secondary btn-sm" %>
+<%= link_to t('edit'), edit_admin_badge_path, class: "btn btn-secondary btn-sm" %>
