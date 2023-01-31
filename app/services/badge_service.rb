@@ -2,7 +2,8 @@ class BadgeService
   CONDITIONS = {
     first_test:            Badges::FirstTest,
     all_tests_in_category: Badges::AllTestsInCategory,
-    all_tests_with_level:  Badges::AllTestsWithLevel
+    all_tests_with_level:  Badges::AllTestsWithLevel,
+    test_on_the_first_try: Badges::TestOnTheFirstTry
   }.freeze
 
   def initialize(test_passage)

@@ -1,5 +1,5 @@
 class Badge < ApplicationRecord
-  CONDITIONS = %w[all_tests_in_category all_tests_with_level first_test].freeze
+  CONDITIONS = %w[ all_tests_in_category all_tests_with_level first_test test_on_the_first_try ].freeze
 
   has_many :badge_users, dependent: :destroy
   has_many :users, through: :badge_users

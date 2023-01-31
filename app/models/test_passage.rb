@@ -8,6 +8,7 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_current_question, on: :create
 
   scope :user_successful, ->(user) { where(user_id: user, successful: true) }
+  scope :tests_of_user, ->(user, testt) { where(user_id: user, test_id: testt) }
 
   def position_of_current_question
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
