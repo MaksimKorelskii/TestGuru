@@ -7,6 +7,18 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_current_question, on: :create
 
+  def timer_passed?
+    time_left <= 0
+  end
+
+  def time_left
+    timer_deadline.to_i - Time.zone.now.to_i
+  end
+
+  def timer_deadline
+    created_at.to_i + test.timer
+  end
+
   def position_of_current_question
     test.questions.order(:id).where('id < ?', current_question.id).count + 1
   end
@@ -24,7 +36,7 @@ class TestPassage < ApplicationRecord
   end
 
   def completed?
-    current_question.nil?
+    current_question.nil? || timer_passed?
   end
 
   def accept!(answer_ids)

@@ -4,5 +4,6 @@
               class: 'form-inline hide',
               data: {test_id: test.id}  do |form|%>
   <%= form.text_field :title, class: 'form-control mr-2'%>
+  <%= form.number_field :timer, class: 'form-control mr-2'%>
   <%= form.submit t('.submit'), class: 'btn btn-primary' %>
 <% end %>

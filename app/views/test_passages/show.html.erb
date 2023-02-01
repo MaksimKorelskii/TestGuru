@@ -8,6 +8,13 @@
                         all_questions: @test_passage.all_questions } do %>
 <% end %>
 
+<%= t('.timer') %>
+  <div class="timer" data-timer="<%= @test_passage.time_left %>">
+    <div>
+      <%= @test_passage.time_left %>
+    </div>
+  </div>
+
 <p>
   <b><%= @test_passage.current_question.body %></b>
 </p>
