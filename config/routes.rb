@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   root 'tests#index'
 
+  resources :badges, only: %i[ index index_user ]
+  get :user_badges, to: 'badges#index_user'
+
   resources :feedbacks, only: %i[ new create ]
 
   devise_for :users, path: :gurus,
@@ -16,6 +19,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    resources :badges
     resources :feedbacks, only: %i[ index ]
 
     get 'gists', to: "gists#index" 

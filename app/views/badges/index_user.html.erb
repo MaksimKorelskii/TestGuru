@@ -1,0 +1,16 @@
+<%= render 'shared/errors', resource: @badge %>
+
+<h1><%= t('.header') %></h1>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th><%= t('.image') %></th>
+      <th><%= t('.name') %></th>
+    </tr>
+ </thead>
+
+  <%= render @badges %>
+</table>
+
+<p><%= link_to t('.back'), root_path, class: "btn btn-secondary btn-sm" %></p>

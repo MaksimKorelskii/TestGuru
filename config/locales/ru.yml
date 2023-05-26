@@ -1,4 +1,10 @@
 ru:
+  badges:
+    index: 
+      header: 'Все награды'
+    index_user: 
+      header: 'Награды пользователя'
+
   feedbacks:
     new:
       feedback_header: 'Оставить отзыв'
@@ -57,6 +63,13 @@ ru:
       back: 'К списку тестов'
 
   admin:
+    badges:
+      new:
+        header: 'Создание награды'
+      edit:
+        header: 'Редактирование награды'
+
+
     gists:
       index:
         question: 'Вопрос'

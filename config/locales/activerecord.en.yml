@@ -1,6 +1,11 @@
 en:
   activerecord:          
     attributes:
+      badge:
+        name: 'Name'
+        image_url: 'Image URL'
+        condition: 'Condition'
+        condition_parameter: 'Addtional condition'
       test:
         title: 'Title'
         level: 'Level'
@@ -19,6 +24,7 @@ en:
         user: 'User'
       
       models:
+        badge: 'Badge'
         feedback: 'Feedback'
         test: 'Test'
         question: 'Question'

@@ -1,0 +1,8 @@
+<tr>
+  <td class='align-middle'><%= badge_image_helper(badge) %></td>
+  <td class='align-middle'><%= link_to badge.name, admin_badge_path(badge) %></td>
+
+  <td class='align-middle'><%= link_to t('.edit'), edit_admin_badge_path(badge) %></td>
+  <td class='align-middle'><%= link_to t('.destroy'), admin_badge_path(badge), method: :delete, data: { confirm: t('sure') } %></td>
+
+</tr>

@@ -7,11 +7,17 @@ class User < ApplicationRecord
          :validatable,
          :confirmable
 
+  has_many :badge_users, dependent: :destroy
+  has_many :badges, through: :badge_users
+
   has_many :feedbacks, dependent: :destroy
   has_many :gists, dependent: :destroy
+  has_many :authored_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
+
   has_many :test_passages, dependent: :destroy
   has_many :tests, through: :test_passages
-  has_many :authored_tests, class_name: 'Test', foreign_key: 'author_id', dependent: :destroy
+  has_many :successful_tests, -> { where(test_passages: { successful: true }) }, 
+           through: :test_passages, source: :test
 
   validates :first_name, presence: true
   validates :email, presence: true, uniqueness: true, 
@@ -27,5 +33,13 @@ class User < ApplicationRecord
 
   def admin?
     is_a?(Admin)
+  end
+
+  def successful_tests_by_level(level)
+    successful_tests.where(level: level)
+  end
+
+  def successful_tests_by_category(category_id)
+    successful_tests.where(category_id: category_id)
   end
 end
